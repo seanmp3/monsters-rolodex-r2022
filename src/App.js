@@ -1,4 +1,5 @@
 import {Component} from "react"
+
 import CardList from "./components/card-list/index"
 import SearchBox from "./components/search-box/index"
 
@@ -13,7 +14,7 @@ class App extends Component{
     }
   }
 
-  componentDidMount() {
+  componentDidMount(){
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((users) => {
@@ -29,7 +30,7 @@ class App extends Component{
     this.setState(() => {
       return {searchField}
     })
-}
+  }
 
   render(){
     const {monsters, searchField} = this.state
